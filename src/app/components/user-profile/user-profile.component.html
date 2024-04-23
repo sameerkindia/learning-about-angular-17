@@ -31,4 +31,21 @@
 
 <button [disabled]="isBtnDisabled">click me</button>  -->
 
+<!-- <div style="background-color: #b1b2b3">
+  <input type="text" #data />
+  <button (click)="sendData(data.value)">data update</button>
+</div> -->
+
 <h1>my name is {{ name }} i am {{ age }}</h1>
+
+<div>
+  <p>{{ componentName }}</p>
+  <input type="text" [(ngModel)]="componentName" />
+</div>
+
+<p>
+  <span>component</span>
+  <input type="text" #box />
+</p>
+
+<button (click)="updateData.emit(box.value)">update data</button>

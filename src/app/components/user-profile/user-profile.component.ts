@@ -1,11 +1,14 @@
 import { CommonModule } from '@angular/common';
 import {
   Component,
+  EventEmitter,
   Input,
+  Output,
   booleanAttribute,
   numberAttribute,
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { User } from '../../../models/User';
 
 function uppercase(name: String) {
   return name.toUpperCase();
@@ -21,7 +24,20 @@ export class UserProfileComponent {
   @Input({ alias: 'username', transform: uppercase }) name = '';
   @Input({ transform: numberAttribute }) age!: Number;
   @Input({ transform: booleanAttribute }) isTrue!: Boolean;
-  // name = 'sameer khan';
+
+  @Output() updateData = new EventEmitter<string>();
+  @Output() recevedData = new EventEmitter<string>();
+  // @Output() recevedData = new EventEmitter<User>();
+  componentName = 'sameer khan';
+
+  sendData(data: string) {
+    this.recevedData.emit(data);
+  }
+
+  // sendData(data: User) {
+  //   this.recevedData.emit(data);
+  // }
+
   // age = 24;
   // salary = 40000;
   // isBtnDisabled = true;
