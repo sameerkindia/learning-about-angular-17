@@ -8,7 +8,7 @@ import {
   numberAttribute,
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { User } from '../../../models/User';
+import { HighlightDirective } from '../../diractives/highlight.directive';
 
 function uppercase(name: String) {
   return name.toUpperCase();
@@ -16,7 +16,7 @@ function uppercase(name: String) {
 @Component({
   selector: 'app-user-profile',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, HighlightDirective],
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.css',
 })
