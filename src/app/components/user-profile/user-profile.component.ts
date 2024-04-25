@@ -1,9 +1,11 @@
 import { CommonModule } from '@angular/common';
 import {
   Component,
+  ElementRef,
   EventEmitter,
   Input,
   Output,
+  ViewChild,
   booleanAttribute,
   numberAttribute,
 } from '@angular/core';
@@ -28,10 +30,32 @@ export class UserProfileComponent {
   @Output() updateData = new EventEmitter<string>();
   @Output() recevedData = new EventEmitter<string>();
   // @Output() recevedData = new EventEmitter<User>();
+
+  @ViewChild('myHeading') heading?: ElementRef;
   componentName = 'sameer khan';
 
   sendData(data: string) {
     this.recevedData.emit(data);
+  }
+
+  constructor() {
+    console.log('constructor called');
+  }
+
+  ngOnChange() {
+    console.log('ngOnChange called');
+  }
+
+  ngAfterViewInit() {
+    console.log(this.heading?.nativeElement);
+  }
+
+  ngOnInit() {
+    console.log('ngOnInit called');
+  }
+
+  ngOnDestroy() {
+    console.log('ngOnDestroy called');
   }
 
   // sendData(data: User) {
