@@ -38,10 +38,6 @@ export class UserProfileComponent {
     this.recevedData.emit(data);
   }
 
-  constructor() {
-    console.log('constructor called');
-  }
-
   ngOnChange() {
     console.log('ngOnChange called');
   }
@@ -50,9 +46,7 @@ export class UserProfileComponent {
     console.log(this.heading?.nativeElement);
   }
 
-  ngOnInit() {
-    console.log('ngOnInit called');
-  }
+  ngOnInit() {}
 
   ngOnDestroy() {
     console.log('ngOnDestroy called');
