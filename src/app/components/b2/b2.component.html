@@ -1,1 +1,13 @@
-<p>b2 works!</p>
+<div>
+  <h1>B2 Component</h1>
+
+  <div>
+    <h1>B2 Count : {{ countService.getCount() }}</h1>
+
+    <div>
+      <button (click)="countService.incCount()">+</button>
+      <span>B1 Button</span>
+      <button (click)="countService.decCount()">-</button>
+    </div>
+  </div>
+</div>

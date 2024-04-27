@@ -1,10 +1,12 @@
 <div>
   <h1>B1 Component</h1>
 
-  <h2></h2>
+  <h2>B1 Count : {{ countService.getCount() }}</h2>
   <div>
-    <button (click)="incCount()">+</button>
+    <button (click)="countService.incCount()">+</button>
     <span>B1 Button</span>
-    <button (click)="decCount()">-</button>
+    <button (click)="countService.decCount()">-</button>
   </div>
+
+  <app-b2></app-b2>
 </div>
