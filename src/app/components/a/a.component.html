@@ -1,0 +1,23 @@
+<h1>A Component</h1>
+
+<!-- <div>
+  <p>Component A</p>
+  <h1>{{ count }}</h1>
+
+  <div>
+    <button (click)="incCount()">+</button>
+    <span>Component A btn</span>
+    <button (click)="decCount()">-</button>
+  </div>
+</div> -->
+
+<div>
+  <p>Component A</p>
+  <h1>Count A Component {{ countService.getCount() }}</h1>
+
+  <div>
+    <button (click)="countService.incCount()">+</button>
+    <span>Component A btn</span>
+    <button (click)="countService.decCount()">-</button>
+  </div>
+</div>

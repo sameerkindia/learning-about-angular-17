@@ -5,11 +5,20 @@ import { CommonModule } from '@angular/common';
 // import { User } from '../models/User';
 import { JokeComponent } from './components/joke/joke.component';
 import { JokeService } from './services/joke.service';
+import { AComponent } from './components/a/a.component';
+import { B1Component } from './components/b1/b1.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UserProfileComponent, CommonModule, JokeComponent],
+  imports: [
+    RouterOutlet,
+    UserProfileComponent,
+    CommonModule,
+    JokeComponent,
+    AComponent,
+    B1Component,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

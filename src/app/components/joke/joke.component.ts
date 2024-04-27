@@ -10,6 +10,7 @@ import { JokeService } from '../../services/joke.service';
 })
 export class JokeComponent {
   joke = 'loading';
+  url = '';
 
   constructor(private jokeService: JokeService) {}
 
@@ -21,7 +22,9 @@ export class JokeComponent {
     this.joke = 'loading';
 
     this.jokeService.getJoke().subscribe((data: any) => {
+      this.url = data.icon_url;
       this.joke = data.value;
+      console.log(this.url);
     });
   }
 }
